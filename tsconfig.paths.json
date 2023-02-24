@@ -2,9 +2,15 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@config/*": ["config/*"],
+      "@api/*": ["api/*"],
       "@core/*": ["core/*"],
-      "@utils/*": ["utils/*"]
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"],
+      "@config/*": ["config/*"],
+      "@routes/*": ["routes/*"],
+      "@styles/*": ["styles/*"],
+      "@constants/*": ["constants/*"],
+      "@components/*": ["components/*"]
     },
     "noUnusedLocals": true,
     "noUnusedParameters": true

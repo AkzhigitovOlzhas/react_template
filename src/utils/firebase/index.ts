@@ -21,7 +21,7 @@ const getOrRegisterServiceWorker = (): Promise<ServiceWorkerRegistration> => {
 export const getFirebaseToken = (): Promise<string> =>
   getOrRegisterServiceWorker().then((serviceWorkerRegistration) =>
     getToken(messaging, {
-      vapidKey: process.env.FIREBASE_VAPID_KEY,
+      vapidKey: process.env.REACT_APP_FIREBASE_VAPID_KEY,
       serviceWorkerRegistration,
     })
   );

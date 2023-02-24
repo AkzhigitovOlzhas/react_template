@@ -1,34 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { useEffect } from "react";
-import { onForegroundMessage } from "@utils/firebase";
 
 function App() {
-  useEffect(() => {
-    onForegroundMessage()
-      .then((payload) => {
-        console.log("Received foreground message: ", payload);
-        const { notification } = payload;
-        console.log(
-          "🚀 ~ file: App.tsx:12 ~ .then ~ notification:",
-          notification
-        );
-      })
-      .catch((err) =>
-        console.log(
-          "An error occured while retrieving foreground message. ",
-          err
-        )
-      );
-  }, []);
-
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
