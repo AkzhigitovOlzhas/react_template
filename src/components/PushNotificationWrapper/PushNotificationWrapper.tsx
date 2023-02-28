@@ -21,7 +21,8 @@ export const PushNotificationWrapper: FC<PushNotificationWrapperProps> = ({ chil
     }, []);
 
     const handleGetFirebaseToken = () => {
-        getFirebaseToken().then((firebaseToken) => {
+        getFirebaseToken()
+            .then((firebaseToken) => {
                 console.log('Firebase token: ', firebaseToken);
                 if (firebaseToken) {
                     setShowNotificationBanner(false);
